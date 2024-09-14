@@ -1,0 +1,282 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  /* Text color for better readability */
+  background-color: rgba(98, 142, 199, 0.532);
+  /* Remove background color */
+}
+
+
+html {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+
+
+header {
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 50px 0;
+  /* Adjust padding */
+  text-align: center;
+  /* Center text */
+}
+
+header h1 {
+  font-size: 4rem;
+  animation: fadeIn 3s ease-in-out;
+}
+
+header p {
+  font-size: 1.5rem;
+  animation: fadeIn 5s ease-in-out;
+}
+
+header img {
+  width: 150px;
+  /* Adjust the width as needed */
+  height: auto;
+  border-radius: 50%;
+  /* Optional: Make the image circular */
+  border: 5px solid white;
+  /* Optional: Add border to the image */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stepper .nav-link {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #20266452;
+  background-color: transparent;
+  /* border: 2px solid #007bff; */
+}
+
+
+.step-content {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+link,
+.nav-tabs .nav-link.active {
+  color: #495057;
+  background-color: #ffffff42;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+
+
+
+
+:root {
+  --circle-size: clamp(1.25rem, 4vw, 2.5rem);
+  /* Slightly smaller circle */
+  --spacing: clamp(0.25rem, 2vw, 0.5rem);
+  --completed-color: #7e7eed;
+  /* Color for completed steps */
+  --line-color: #e0e0e0;
+  /* Default line color */
+  --line-color-completed: #7e7eed;
+  /* Color for line connecting completed steps */
+}
+
+.c-stepper__item {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 4rem;
+}
+
+.c-stepper__item:before {
+  content: "";
+  flex: 0 0 var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  background-color: lightgrey;
+  border: 2px solid lightgrey;
+  /* Add border for default state */
+}
+
+.c-stepper__item.active:before,
+.c-stepper__item.completed:before {
+  background-color: var(--completed-color);
+  /* Color for active and completed steps */
+  border-color: var(--completed-color);
+  /* Border color for completed steps */
+}
+
+.c-stepper__item:not(:last-child):after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(var(--circle-size) + var(--spacing));
+  bottom: var(--spacing);
+  z-index: -1;
+  transform: translateX(calc(var(--circle-size) / 2));
+  width: 2px;
+  background-color: var(--line-color);
+  /* Default line color */
+}
+
+.c-stepper__item.completed~.c-stepper__item:before {
+  background-color: var(--completed-color);
+  /* Line color for completed steps */
+}
+
+.c-stepper__item.completed~.c-stepper__item:after {
+  background-color: var(--line-color-completed);
+  /* Line color for connecting completed steps */
+}
+
+.c-stepper__title {
+  font-weight: bold;
+  font-size: clamp(1rem, 4vw, 1.25rem);
+  margin-bottom: clamp(0.85rem, 2vmax, 1rem);
+}
+
+.c-stepper__desc {
+  color: rgb(222, 216, 216);
+  font-size: clamp(0.85rem, 2vmax, 1rem);
+}
+
+.c-stepper__content {
+  max-width: 700px;
+}
+
+/*** Non-demo CSS ***/
+.wrapper {
+  max-width: 1000px;
+  margin: 2rem auto 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 1rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+.resume-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.resume-button:hover {
+  background-color: #0056b3;
+  text-decoration: none;
+}
+
+
+
+.resumeButton {
+  width: 16%;
+  font-size: 24px;
+}
+
+
+.skills-container {
+  text-align: center;
+}
+
+.skills-row {
+  margin: 10px 0;
+}
+
+.skill-button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.skill-button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #343a40;
+  /* Dark background color */
+  color: #ffffff;
+  /* White text color */
+}
+
+
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icon {
+  color: #ffffff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 20px;
+  /* Adjust icon size here */
+  font-family: 'Roboto', sans-serif;
+  /* Use Google Font here */
+  transition: color 0.3s;
+}
+
+
+.social-icon:hover {
+  color: #adb5bd;
+  /* Light grey color on hover */
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.icon-text:hover {
+  color: #adb5bd;
+  /* Light grey color on hover */
+}
+
+
+.icon-text {
+  font-family: 'Arial', sans-serif;
+  /* Change font family here for text */
+  font-size: 16px;
+  /* Adjust text size here if needed */
+  color: #ffffff;
+  /* Text color */
+  text-transform: uppercase;
+  /* Optional: Capitalize text */
+}
